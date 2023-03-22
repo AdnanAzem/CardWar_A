@@ -1,28 +1,40 @@
-#include <string>
-#include <iostream>
-#include <vector>
 
-using namespace std;
-namespace ariel{
+#ifndef GAME_HPP
+#define GAME_HPP
 
-};
+#include "player.hpp"
+#include "iostream"
 
 class Game{
-    private:
 
+    private:
+        Player player1;
+        Player player2;
 
     public:
-     Game(Player p1, Player p2){}
 
+        // constructors
+        Game(){}
+        Game(Player const &player1,Player const &player2){};
 
+        //playes the game untill the end
+        void playAll(){};
 
-     void playTurn(){}
-     void printLastTurn(){}
+        // prints the name of the winning player
+        void printWiner(){};
 
-     void playAll(){}
+        // prints all the turns played one line per turn
+        void printLog(){};
 
-     void printWiner(){}
-     void printLog(){}
-     void printStats(){}
+        // for each player prints basic statistics: win rate, cards won, <other stats you want to print>
+        void printStats(){};
+
+        void playTurn(){};
+
+        // print the last turn stats.
+        void printLastTurn(){};
 
 };
+
+
+#endif

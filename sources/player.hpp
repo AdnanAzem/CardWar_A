@@ -1,22 +1,42 @@
+
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
+
 #include <string>
-#include <iostream>
-#include <vector>
+#include <stdio.h>
+#include <stack>
+#include "card.hpp"
+
+namespace ariel{}
+using namespace ariel;
 
 using namespace std;
-namespace ariel{
 
-};
 
 class Player{
 
     private:
-     std::string name;
+        string name;
+        int wonCard;
+        stack<Card> cards;
 
-
-
+    
     public:
-     Player(string name){this->name = name;};
-     int stacksize(){}
-     int cardesTaken(){}
+
+        // constructors
+        Player(){}
+        Player(string const &name){};
+
+        // getter
+        string getName(){return name;};
+
+        // prints the amount of cards left.
+        int stacksize(){return 0;};
+
+        // prints the amount of cards this player has won. 
+        int cardesTaken(){return 0;};   
 
 };
+
+#endif
+
