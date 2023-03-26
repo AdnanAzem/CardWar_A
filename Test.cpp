@@ -13,9 +13,10 @@ TEST_CASE("Test to check Errors Before we start the Game"){
     Player p2("Bob");
     Game game(p1,p2); 
 
-    CHECK_THROWS(game.printWiner());
-    CHECK_THROWS(game.printLog());
-    CHECK_THROWS(game.printStats());
+    CHECK_THROWS(game.printWiner()); // no winner because the game doesn't start
+    CHECK_THROWS(game.printLog()); // no logs because the game doesn't start
+    CHECK_THROWS(game.printStats()); // no stats because the game doesn't start
+    CHECK_THROWS(game.printLastTurn()); // no stats of last turn because the game doesn't start
 }
 
 TEST_CASE("Game 1"){
