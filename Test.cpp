@@ -8,6 +8,15 @@
 using namespace ariel;
 using namespace std;
 
+TEST_CASE("Test to check Errors Before we start the Game"){
+    Player p1("Alice");
+    Player p2("Bob");
+    Game game(p1,p2); 
+
+    CHECK_THROWS(game.printWiner());
+    CHECK_THROWS(game.printLog());
+    CHECK_THROWS(game.printStats());
+}
 
 TEST_CASE("Game 1"){
 
