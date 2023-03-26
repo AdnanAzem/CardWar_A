@@ -5,7 +5,6 @@ using namespace ariel;
 
 Player::Player(string const &name) {
     this->name = name;
-
 }
 
 Player::Player(){

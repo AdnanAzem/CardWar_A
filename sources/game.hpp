@@ -34,6 +34,9 @@ class Game{
         // print the last turn stats.
         void printLastTurn(){};
 
+        // Destructor
+        ~Game(){};
+
 };
 
 

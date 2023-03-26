@@ -28,13 +28,16 @@ class Player{
         Player(string const &name){};
 
         // getter
-        string getName(){return name;};
+        string getName(){return this->name;};
 
         // prints the amount of cards left.
-        int stacksize(){return 0;};
+        int stacksize(){return cards.size();};
 
         // prints the amount of cards this player has won. 
-        int cardesTaken(){return 0;};   
+        int cardesTaken(){return this->wonCard;};  
+
+        // Destructor
+        ~Player(){} 
 
 };
 
